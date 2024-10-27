@@ -1,0 +1,50 @@
+/* Latar belakang tetap sama */
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0.5)), 
+                linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+                url('download.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
+}
+
+/* Mengatur tampilan lirik berderet ke bawah */
+.lyrics-display {
+    display: flex;
+    flex-direction: column; /* Membuat lirik berderet vertikal */
+    gap: 10px; /* Spasi antar baris lirik */
+}
+
+.lyrics-display p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin: 0;
+    white-space: nowrap; /* Pastikan setiap lirik tetap dalam satu baris */
+    opacity: 0; /* Mulai dari transparan */
+    animation: fade-in 1s forwards; /* Efek pudar */
+}
+
+/* Gaya khusus untuk baris lirik yang ditonjolkan */
+.strong-line {
+    font-size: 4em;
+    font-weight: bold;
+    color: #ffdd57;
+}
+
+/* Efek animasi fade-in */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
